@@ -29,5 +29,8 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
+      <Label text="Label" />
+      <Label fx:id="txtDate" layoutX="418.0" layoutY="517.0" prefHeight="18.0" prefWidth="74.0" text="Date" />
+      <Label fx:id="txtTime" layoutX="526.0" layoutY="517.0" prefHeight="18.0" prefWidth="74.0" text="Time" />
    </children>
 </AnchorPane>

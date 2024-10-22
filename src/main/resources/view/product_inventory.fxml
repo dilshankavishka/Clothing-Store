@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="564.0" prefWidth="724.0" style="-fx-background-color: #d0ece8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductInventoryController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#79c4a9" height="64.0" stroke="BLACK" strokeType="INSIDE" width="724.0" />
+        <Label layoutX="106.0" layoutY="7.0" prefHeight="50.0" prefWidth="526.0" text="INVENTORY MANAGEMENT">
+            <font>
+                <Font name="Arial" size="39.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtOrderID" layoutX="42.0" layoutY="78.0" prefHeight="42.0" prefWidth="102.0" text="Product ID : ">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtDate" layoutX="419.0" layoutY="514.0" prefHeight="42.0" prefWidth="123.0" text="Date : 2024-09-11">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtTime" layoutX="586.0" layoutY="514.0" prefHeight="42.0" prefWidth="123.0" text="Time : 09:34:23">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtProductName" layoutX="43.0" layoutY="144.0" prefHeight="26.0" prefWidth="123.0" text="Product Name" />
+        <TextField fx:id="txtPrice" layoutX="393.0" layoutY="144.0" prefHeight="26.0" prefWidth="87.0" text="Price" />
+        <TextField fx:id="txtQty" layoutX="501.0" layoutY="144.0" prefHeight="26.0" prefWidth="59.0" text="Qty" />
+        <TableView fx:id="cartTable" layoutX="28.0" layoutY="202.0" prefHeight="200.0" prefWidth="667.0">
+            <columns>
+                <TableColumn fx:id="productId" prefWidth="91.20001220703125" text="Product ID" />
+                <TableColumn fx:id="name" prefWidth="176.00006866455078" text="Name" />
+                <TableColumn fx:id="Catogory" prefWidth="172.7999267578125" text="Catogory" />
+                <TableColumn fx:id="size" prefWidth="68.79995727539062" text="Size" />
+                <TableColumn fx:id="qty" prefWidth="73.5999755859375" text="Qty" />
+            <TableColumn fx:id="price" prefWidth="85.60003662109375" text="Price" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtProductId" layoutX="153.0" layoutY="86.0" prefHeight="26.0" prefWidth="78.0" promptText="ProductID" />
+        <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="174.0" layoutY="455.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #75dfb9;" text="Update Product">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="394.0" layoutY="455.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #75dfb9;" text="Delete Product">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="576.0" layoutY="455.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #75dfb9;" text="Add Product">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+        <ComboBox fx:id="comboSize" layoutX="303.0" layoutY="144.0" prefHeight="26.0" prefWidth="66.0" promptText="Size" />
+        <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="28.0" layoutY="455.0" onAction="#btnClearOnAction" style="-fx-background-color: #75dfb9;" text="Clear Form">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+      <TextField fx:id="txtSupplier" layoutX="586.0" layoutY="144.0" prefHeight="26.0" prefWidth="110.0" text="Supplier" />
+      <ComboBox fx:id="comboCatogory" layoutX="182.0" layoutY="144.0" prefHeight="26.0" prefWidth="98.0" promptText="Catogory" />
+    </children>
+</AnchorPane>
