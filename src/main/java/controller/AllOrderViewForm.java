@@ -1,36 +1,37 @@
 package controller;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.util.Duration;
 
-import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class FrontpageController implements Initializable {
-    @FXML
-    private AnchorPane scenepaneId;
-    @FXML
-    private JFXButton btnAdmin;
+public class AllOrderViewForm implements Initializable {
 
     @FXML
-    private JFXButton btnEmployee;
+    private TableColumn<?, ?> OrderId;
+
+    @FXML
+    private TableView<?> cartTable;
+
+    @FXML
+    private TableColumn<?, ?> date;
+
+    @FXML
+    private TableColumn<?, ?> time;
+
+    @FXML
+    private TableColumn<?, ?> total;
 
     @FXML
     private Label txtDate;
@@ -39,28 +40,7 @@ public class FrontpageController implements Initializable {
     private Label txtTime;
 
     @FXML
-    void btnAdminOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/admin_login.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-
-    @FXML
-    void btnEmployeeOnAction(ActionEvent event) {
-        Stage stage = new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/employee_login.fxml"))));
-            stage.show();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    private TableColumn<?, ?> userId;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

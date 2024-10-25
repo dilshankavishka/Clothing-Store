@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="564.0" prefWidth="724.0" style="-fx-background-color: #d0ece8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllOrderViewForm">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#218683" height="64.0" stroke="BLACK" strokeType="INSIDE" width="724.0" />
+        <Label layoutX="120.0" layoutY="14.0" text="ALL ORDER VIEW FORM">
+            <font>
+                <Font name="Arial" size="39.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtDate" layoutX="569.0" layoutY="78.0" prefHeight="42.0" prefWidth="123.0" text="Date : 2024-09-11">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="txtTime" layoutX="569.0" layoutY="120.0" prefHeight="42.0" prefWidth="123.0" text="Time : 09:34:23">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <TableView fx:id="cartTable" layoutX="34.0" layoutY="169.0" prefHeight="377.0" prefWidth="667.0">
+            <columns>
+                <TableColumn fx:id="OrderId" prefWidth="146.40003204345703" text="OrderId" />
+                <TableColumn fx:id="date" prefWidth="134.39996337890625" text="Date" />
+                <TableColumn fx:id="time" prefWidth="159.20001220703125" text="Time" />
+                <TableColumn fx:id="userId" prefWidth="107.19998168945312" text="UserId" />
+                <TableColumn fx:id="total" prefWidth="121.5999755859375" text="Total" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

@@ -7,11 +7,11 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
-import java.awt.*;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -26,10 +26,10 @@ public class AdminLoginController implements Initializable {
     @FXML
     private TextField txtEmail;
     @FXML
-    private Label txtDate;
+    private Label lblDate;
 
     @FXML
-    private Label txtTime;
+    private Label lblTime;
 
     @FXML
     private PasswordField txtPassword;
@@ -49,11 +49,11 @@ public class AdminLoginController implements Initializable {
         SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
         String dateNow = f.format(date);
 
-        txtDate.setText(dateNow);
+        lblDate.setText(dateNow);
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime localTime = LocalTime.now();
-            txtTime.setText(localTime.getHour() + " : " + localTime.getMinute() + " : " + localTime.getSecond());
+            lblTime.setText(localTime.getHour() + " : " + localTime.getMinute() + " : " + localTime.getSecond());
         }),
                 new KeyFrame(Duration.seconds(1))
         );

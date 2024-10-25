@@ -38,12 +38,13 @@
         <TextField fx:id="txtQty" layoutX="501.0" layoutY="144.0" prefHeight="26.0" prefWidth="59.0" text="Qty" />
         <TableView fx:id="cartTable" layoutX="28.0" layoutY="202.0" prefHeight="200.0" prefWidth="667.0">
             <columns>
-                <TableColumn fx:id="productId" prefWidth="91.20001220703125" text="Product ID" />
-                <TableColumn fx:id="name" prefWidth="176.00006866455078" text="Name" />
-                <TableColumn fx:id="Catogory" prefWidth="172.7999267578125" text="Catogory" />
-                <TableColumn fx:id="size" prefWidth="68.79995727539062" text="Size" />
-                <TableColumn fx:id="qty" prefWidth="73.5999755859375" text="Qty" />
-            <TableColumn fx:id="price" prefWidth="85.60003662109375" text="Price" />
+                <TableColumn fx:id="productId" prefWidth="69.60000419616699" text="Product ID" />
+                <TableColumn fx:id="name" prefWidth="138.39994049072266" text="Name" />
+                <TableColumn fx:id="category" prefWidth="108.0" text="Catogory" />
+                <TableColumn fx:id="size" prefWidth="87.20001220703125" text="Size" />
+                <TableColumn fx:id="qty" prefWidth="70.4000244140625" text="Qty" />
+            <TableColumn fx:id="price" prefWidth="75.19998168945312" text="Price" />
+            <TableColumn fx:id="supplier" prefWidth="115.20000000000005" text="Supplier" />
             </columns>
         </TableView>
         <TextField fx:id="txtProductId" layoutX="153.0" layoutY="86.0" prefHeight="26.0" prefWidth="78.0" promptText="ProductID" />
@@ -68,7 +69,7 @@
                 <Font name="System Bold" size="15.0" />
             </font>
         </JFXButton>
-      <TextField fx:id="txtSupplier" layoutX="586.0" layoutY="144.0" prefHeight="26.0" prefWidth="110.0" text="Supplier" />
-      <ComboBox fx:id="comboCatogory" layoutX="182.0" layoutY="144.0" prefHeight="26.0" prefWidth="98.0" promptText="Catogory" />
+      <ComboBox fx:id="comboCategory" layoutX="182.0" layoutY="144.0" prefHeight="26.0" prefWidth="98.0" promptText="Catogory" />
+      <ComboBox fx:id="comboSupplier" layoutX="585.0" layoutY="144.0" prefHeight="26.0" prefWidth="98.0" promptText="Supplier" />
     </children>
 </AnchorPane>
