@@ -1,20 +1,21 @@
-package repository.custom.Impl;
+package repository.custom.impl;
 
-import entity.OrderEntity;
-import javafx.collections.ObservableList;
+import entity.CartTMEntity;
 import javafx.scene.control.Alert;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import repository.custom.OrderDao;
+import repository.custom.OrderDetailDao;
 import util.HibernateUtil;
 
-public class OrderDaoImpl implements OrderDao {
+import java.util.List;
+
+public class OderDetailDaoImpl implements OrderDetailDao {
     @Override
-    public boolean save(OrderEntity orderEntity) {
+    public boolean save(CartTMEntity orderDetailEntity) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            session.persist(orderEntity);
+            session.persist(orderDetailEntity);
             session.getTransaction().commit();
             return true;
         } catch (Exception sqlException) {
@@ -22,6 +23,7 @@ public class OrderDaoImpl implements OrderDao {
                 new Alert(Alert.AlertType.ERROR, "Failed to add Record->" + sqlException.getMessage()).show();
                 transaction.rollback();
                 sqlException.printStackTrace();
+                System.out.println(sqlException.getMessage());
             }
         }finally{
             session.close();
@@ -34,18 +36,17 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public ObservableList<OrderEntity> getAll() { //check
-        Session session = HibernateUtil.getSession();
-        return (ObservableList<OrderEntity>) session.createQuery("SELECT a FROM OrderEntity a", OrderEntity.class).getResultList();
+    public List<CartTMEntity> getAll() {
+        return List.of();
     }
 
     @Override
-    public boolean update(OrderEntity orderEntity) {
+    public boolean update(CartTMEntity orderDetailEntity) {
         return false;
     }
 
     @Override
-    public OrderEntity search(String id) {
+    public CartTMEntity search(String id) {
         return null;
     }
 }

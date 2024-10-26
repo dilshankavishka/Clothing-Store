@@ -1,6 +1,5 @@
 package service.custom.impl;
 
-import dto.Employee;
 import dto.Order;
 import dto.OrderDetail;
 import entity.CartTMEntity;
@@ -13,6 +12,7 @@ import repository.DaoFactory;
 import repository.custom.OrderDao;
 import repository.custom.OrderDetailDao;
 import repository.custom.ProductDao;
+import repository.custom.impl.OrderDaoImpl;
 import service.custom.OrderService;
 import util.DaoType;
 

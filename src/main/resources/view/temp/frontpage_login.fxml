@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" prefHeight="548.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FrontpageController">
+    <children>
+        <Label layoutX="2.0" layoutY="1.0" prefHeight="51.0" prefWidth="640.0" style="-fx-background-color: #cae9e5;" text="                  CLOTHIFY STORE" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="35.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="224.0" fitWidth="231.0" layoutX="210.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/usericon.jpg" />
+            </image>
+        </ImageView>
+        <TextField fx:id="txtEmail" layoutX="178.0" layoutY="344.0" prefHeight="26.0" prefWidth="282.0" promptText="Email" />
+        <PasswordField fx:id="txtPassword" layoutX="178.0" layoutY="384.0" prefHeight="26.0" prefWidth="282.0" promptText="Password" />
+        <JFXButton buttonType="RAISED" layoutX="262.0" layoutY="424.0" onAction="#btnLoginOnAction" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: #79c4a9;" text="LOGIN">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </JFXButton>
+      <Label fx:id="lblDate" layoutX="418.0" layoutY="525.0" prefHeight="18.0" prefWidth="101.0" text="Date" />
+      <Label fx:id="lblTime" layoutX="534.0" layoutY="524.0" prefHeight="18.0" prefWidth="88.0" text="Time" />
+      <Label blendMode="COLOR_BURN" contentDisplay="CENTER" layoutX="181.0" layoutY="52.0" prefHeight="51.0" prefWidth="282.0" style="-fx-background-color: #cae9e5;" text="         LOGIN">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="277.0" layoutY="483.0" onAction="#lnkCreateAccountOnAction" text="Create Account" />
+      <JFXButton buttonType="RAISED" layoutX="531.0" layoutY="428.0" onAction="#btnadminOnAction" prefHeight="6.0" prefWidth="90.0" style="-fx-background-color: #79c4a9;" text="admin">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="532.0" layoutY="467.0" onAction="#btnuserOnAction" prefHeight="18.0" prefWidth="88.0" style="-fx-background-color: #79c4a9;" text="user">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

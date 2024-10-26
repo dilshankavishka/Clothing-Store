@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="581.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="580.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="215.0">
+            <fill>
+                <LinearGradient endX="0.8672985781990521" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                            <color>
+                                <Color red="0.9450980424880981" green="0.7686274647712708" blue="0.05882352963089943" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.2631579041481018" green="0.2295321673154831" blue="0.09502924233675003" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <BorderPane fx:id="borderPane" layoutX="-1.0" layoutY="1.0" prefHeight="581.0" prefWidth="855.0" style="-fx-background-color: #d0ece8;">
+            <left>
+                <VBox alignment="TOP_CENTER" prefHeight="587.0" prefWidth="215.0" style="-fx-background-color: #75dfb9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane prefHeight="92.0" prefWidth="215.0">
+                            <children>
+                                <Label layoutX="19.0" layoutY="14.0" prefHeight="42.0" prefWidth="176.0" text="CLOTHIFY" textFill="#b18f12">
+                                    <font>
+                                        <Font name="Baskerville Old Face" size="34.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="72.0" layoutY="46.0" prefHeight="42.0" prefWidth="71.0" text="Admin" textFill="#b18f12">
+                                    <font>
+                                        <Font name="Baskerville Old Face" size="23.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="277.0" onAction="#btnProfileOnAction" prefHeight="60.0" prefWidth="223.0" style="-fx-background-color: #75dfb9;" text="Profile">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnOrderOnAction" prefHeight="60.0" prefWidth="251.0" style="-fx-background-color: #75dfb9;" text="Order">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnProductsOnAction" prefHeight="60.0" prefWidth="238.0" style="-fx-background-color: #75dfb9;" text="Products">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnSuppliersOnAction" prefHeight="60.0" prefWidth="233.0" style="-fx-background-color: #75dfb9;" text="Suppliers">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#btnReportsOnAction" prefHeight="60.0" prefWidth="223.0" style="-fx-background-color: #75dfb9;" text="Reports">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="308.0" onAction="#btnLogOutOnAction" prefHeight="60.0" prefWidth="218.0" style="-fx-background-color: #75dfb9;" text="Log Out">
+                            <font>
+                                <Font name="Baskerville Old Face" size="20.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="120.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                    </children>
+                </VBox>
+            </left>
+            <center>
+                <ImageView fitHeight="350.0" fitWidth="326.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@../../images/usericon.jpg" />
+                    </image>
+                </ImageView>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

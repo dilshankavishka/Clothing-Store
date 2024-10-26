@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileFormController">
+    <children>
+        <AnchorPane prefHeight="580.0" prefWidth="800.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8a725a" height="580.0" stroke="BLACK" strokeType="INSIDE" width="802.0" />
+                <ImageView fitHeight="206.0" fitWidth="210.0" layoutX="104.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/usericon.jpg" />
+                    </image>
+                </ImageView>
+                <Label fx:id="txtNameImg" layoutX="154.0" layoutY="369.0" prefHeight="43.0" prefWidth="106.0" text="Name">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="36.0" />
+                    </font>
+                </Label>
+                <Label layoutX="408.0" layoutY="222.0" prefHeight="34.0" prefWidth="63.0" text="ID :">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtId" layoutX="575.0" layoutY="222.0" prefHeight="34.0" prefWidth="158.0" text="id">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="408.0" layoutY="273.0" prefHeight="34.0" prefWidth="95.0" text="Name : ">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtName" layoutX="575.0" layoutY="273.0" prefHeight="34.0" prefWidth="158.0" text="name">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="408.0" layoutY="325.0" prefHeight="34.0" prefWidth="130.0" text="Company :">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtCompany" layoutX="574.0" layoutY="325.0" prefHeight="34.0" prefWidth="158.0" text="company">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="408.0" layoutY="374.0" prefHeight="34.0" prefWidth="106.0" text="Email :">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtEmail" layoutX="574.0" layoutY="374.0" prefHeight="34.0" prefWidth="158.0" text="email">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label layoutX="408.0" layoutY="424.0" prefHeight="34.0" prefWidth="158.0" text="Contact No :">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="txtConNo" layoutX="574.0" layoutY="424.0" prefHeight="34.0" prefWidth="158.0" text="conNo">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="scenePane" prefHeight="515.0" prefWidth="700.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="459.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="754.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cae9e5" height="58.0" stroke="BLACK" strokeType="INSIDE" width="753.0" />
+        <Label layoutX="220.0" layoutY="8.0" text="CLOTHIFY STORE">
+            <font>
+                <Font name="Arial" size="36.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtEmail" focusColor="BLACK" labelFloat="true" layoutX="291.0" layoutY="346.0" prefHeight="25.0" prefWidth="172.0" promptText="Email" unFocusColor="#bfa019">
+            <font>
+                <Font name="Baskerville Old Face" size="19.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton buttonType="RAISED" layoutX="502.0" layoutY="395.0" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #79c4a9;" text="Register" textAlignment="CENTER">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Baskerville Old Face" size="19.0" />
+            </font>
+        </JFXButton>
+        <JFXTextField fx:id="txtPassword" focusColor="BLACK" labelFloat="true" layoutX="290.0" layoutY="395.0" prefHeight="25.0" prefWidth="172.0" promptText="Password" unFocusColor="#bfa019">
+            <font>
+                <Font name="Baskerville Old Face" size="19.0" />
+            </font>
+        </JFXTextField>
+        <Label layoutX="315.0" layoutY="246.0" text="Create Account" textFill="#79c4a9">
+            <font>
+                <Font name="Baskerville Old Face" size="20.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtUserId" focusColor="BLACK" labelFloat="true" layoutX="291.0" layoutY="295.0" prefHeight="25.0" prefWidth="172.0" promptText="UserId" unFocusColor="#bfa019">
+            <font>
+                <Font name="Baskerville Old Face" size="19.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton fx:id="btnLogin" layoutX="351.0" layoutY="395.0" onAction="#btnLoginOnAction" prefHeight="35.0" prefWidth="112.0" style="-fx-background-color: #f1c40f;" text="Log In" textAlignment="CENTER" visible="false">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="Baskerville Old Face" size="19.0" />
+            </font>
+        </JFXButton>
+        <Hyperlink layoutX="396.0" layoutY="467.0" onAction="#lnkLoginOnAction" text="Log In">
+         <font>
+            <Font size="14.0" />
+         </font></Hyperlink>
+        <Label layoutX="279.0" layoutY="470.0" text="Have an account ?" textFill="#ddc455">
+            <font>
+                <Font name="Baskerville Old Face" size="15.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="301.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/usericon.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

@@ -1,8 +1,8 @@
 package service.custom;
 
 import dto.Product;
-import service.SuperService;
 import javafx.collections.ObservableList;
+import service.SuperService;
 
 public interface ProductService extends SuperService {
     boolean addProduct(Product product);

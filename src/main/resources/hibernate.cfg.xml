@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.url">
-            jdbc:mysql://localhost:3306/clothifystore?createDatabaseIfNotExist=true
+            jdbc:mysql://localhost:3306/clothify?createDatabaseIfNotExist=true
         </property>
         <property name="connection.driver_class">
             com.mysql.cj.jdbc.Driver
@@ -22,6 +22,5 @@
         <mapping class="entity.ProductEntity"/>
         <mapping class="entity.LoginEntity"/>
         <mapping class="entity.SupplierEntity"/>
-        <mapping class="entity.AdminLoginEntity"/>
     </session-factory>
 </hibernate-configuration>

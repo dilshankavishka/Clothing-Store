@@ -1,6 +1,5 @@
 package service.custom.impl;
 
-import dto.Product;
 import dto.Supplier;
 import entity.SupplierEntity;
 import javafx.collections.FXCollections;

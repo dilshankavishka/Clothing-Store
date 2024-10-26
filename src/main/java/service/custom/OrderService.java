@@ -1,9 +1,11 @@
 package service.custom;
 
-import dto.Employee;
 import dto.Order;
+import entity.OrderEntity;
 import javafx.collections.ObservableList;
 import service.SuperService;
+
+import java.util.List;
 
 public interface OrderService extends SuperService {
     boolean addOrder(Order order);
@@ -11,4 +13,5 @@ public interface OrderService extends SuperService {
     ObservableList<Order> getAll();
     ObservableList<String> getOrderIds();
     String generateId ();
+
 }

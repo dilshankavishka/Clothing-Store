@@ -1,21 +1,27 @@
-package repository.custom.Impl;
+package repository.custom.impl;
 
 import entity.CartTMEntity;
-import javafx.collections.FXCollections;
+import entity.EmployeeEntity;
+import entity.OrderEntity;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import repository.DaoFactory;
+import repository.custom.OrderDao;
 import repository.custom.OrderDetailDao;
+import util.DaoType;
 import util.HibernateUtil;
 
-public class OrderDetailDaoImpl implements OrderDetailDao {
+import java.util.List;
+
+public class OrderDaoImpl implements OrderDao {
     @Override
-    public boolean save(CartTMEntity orderDetailEntity) {
+    public boolean save(OrderEntity orderEntity) {
         Session session = HibernateUtil.getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            session.persist(orderDetailEntity);
+            session.persist(orderEntity);
             session.getTransaction().commit();
             return true;
         } catch (Exception sqlException) {
@@ -23,7 +29,6 @@ public class OrderDetailDaoImpl implements OrderDetailDao {
                 new Alert(Alert.AlertType.ERROR, "Failed to add Record->" + sqlException.getMessage()).show();
                 transaction.rollback();
                 sqlException.printStackTrace();
-                System.out.println(sqlException.getMessage());
             }
         }finally{
             session.close();
@@ -36,17 +41,18 @@ public class OrderDetailDaoImpl implements OrderDetailDao {
     }
 
     @Override
-    public ObservableList<CartTMEntity> getAll() {
-        return FXCollections.observableArrayList();
+    public List<OrderEntity> getAll() {
+        Session session = HibernateUtil.getSession();
+        return session.createQuery("SELECT a FROM OrderEntity a", OrderEntity.class).getResultList();
     }
 
     @Override
-    public boolean update(CartTMEntity orderDetailEntity) {
+    public boolean update(OrderEntity orderEntity) {
         return false;
     }
 
     @Override
-    public CartTMEntity search(String id) {
+    public OrderEntity search(String id) {
         return null;
     }
 }

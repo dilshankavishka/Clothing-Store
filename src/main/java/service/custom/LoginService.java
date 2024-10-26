@@ -1,6 +1,7 @@
 package service.custom;
 
 import dto.Login;
+import entity.LoginEntity;
 import service.SuperService;
 
 public interface LoginService extends SuperService {
